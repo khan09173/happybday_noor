@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HBD Bhai</title>
+<style>
+body {
+  background-image: url('bday.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input {
+  margin-top: 20%;
+  margin-left: 20%;
+  height: 60px;
+  width: 200px;
+}
+.image-container {
+  background-image: url("img_nature.jpg");
+  background-size: cover;
+  position: relative;
+  height: 300px;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 5vw; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 55%;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+button{
+  margin-top: 40%;
+  margin-left: 20%;
+  width: 100px;
+  height: 80px;
+}
+
+</style>
+</head>
+<body>
+  <input type="button" id="btt" value="Happy Birthday Bro, Click here" onclick="play()" style="display: block;">
+  <audio id="audio" src="hppy.mp3"></audio>
+
+
+  <div class="image-container" id="play" style="display: none;">
+    <div class="text">HAPPY BIRTHDAY BHAI</div>
+    <button type="button" onclick="change()">Next</button>
+  </div>
+  <div class="image-container" id="play1" style="display: none;">
+    <div class="text">MAY ALL YOUR WISHES COME TRUE</div>
+    <button type="button" onclick="changes()">Next</button>
+  </div>
+  <div class="image-container" id="play2" style="display: none;">
+    <div class="text">Ur life is full of crazy colours and joy of loving friends; Hpy bdy for the opportunity to celebrate not just you but our friendship</div>
+    <button type="button" onclick="changes1()">Next</button>
+  </div>
+  <div class="image-container" id="play3" style="display: none;">
+    <div class="text">It’s celebration time! I hope you are having the time of your life as you celebrate your birthday</div>
+    <button type="button" onclick="changes2()">Next</button>
+  </div>
+  <div class="image-container" id="play4" style="display: none;">
+    <div class="text">It’s your birthday! I hope it is filled with happiness and plenty of love. Thank you for Watching</div>
+    
+  </div>
+<script>
+  function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+    document.getElementById("btt").style.display = "none";
+    document.getElementById("play").style.display = "block";
+  }
+  function change(){
+    document.getElementById("play").style.display = "none";
+    document.getElementById("play1").style.display = "block"
+  }
+  function changes(){
+    document.getElementById("play1").style.display = "none";
+    document.getElementById("play2").style.display = "block"
+  }
+  function changes1(){
+    document.getElementById("play2").style.display = "none";
+    document.getElementById("play3").style.display = "block"
+  }
+  function changes2(){
+    document.getElementById("play3").style.display = "none";
+    document.getElementById("play4").style.display = "block"
+  }
+</script>
+</body>
+</html>
